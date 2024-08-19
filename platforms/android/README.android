@@ -1,1 +1,12 @@
 See http://opencv.org/platforms/android
+
+Instructions to compile OpenCV SDK for Android with support for 16kb page size (for Android 15+) on MacOS:
+1. Install latest NDK in Android Studio
+2. Install latest Android Build Tools in Android Studio
+3. Run: export ANDROID_SDK=$HOME/Library/Android/sdk                                                                                           
+        export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
+4. Compile OpenCV SDK for Android with:
+        python platforms/android/build_sdk.py ./build . --use_android_buildtools --config ndk-25.config.py --no_samples_build
+4. Import OpenCV SDK in Android Studio as a module
+
+Relevant resource: https://github.com/opencv/opencv/wiki/Custom-OpenCV-Android-SDK-and-AAR-package-build

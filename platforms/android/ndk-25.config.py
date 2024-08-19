@@ -10,6 +10,8 @@ cmake_common_vars = {
     'ANDROID_GRADLE_PLUGIN_VERSION': '7.3.1',
     'GRADLE_VERSION': '7.5.1',
     'KOTLIN_PLUGIN_VERSION': '1.8.20',
+    'ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES': 'ON',
+    'WITH_IPP': 'OFF'
 }
 ABIs = [
     ABI("2", "armeabi-v7a", None, ndk_api_level=ANDROID_NATIVE_API_LEVEL, cmake_vars=cmake_common_vars),
